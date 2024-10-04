@@ -6,27 +6,113 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- Header -->
     <header>
-      <h1>Welcome to My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
+      <!-- Hero Section -->
+      <section id="hero">
+        <div class="hero-content">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Profile Photo"
+            class="profile-photo"
+          />
+          <h1>Welcome to My Portfolio</h1>
+          <p>
+            Hi, I'm [Your Name], a passionate software engineer with a focus on
+            creating engaging and efficient front-end applications.
+          </p>
+          <p>
+            I specialize in HTML, CSS, JavaScript, and modern front-end
+            frameworks. I love building web experiences that are user-friendly
+            and visually appealing.
+          </p>
+          <a href="#projects" class="btn">Check Out My Work</a>
+        </div>
+      </section>
+
+      <!-- About Me Section -->
       <section id="about">
         <h2>About Me</h2>
-        <p>This is where you'll introduce yourself and list your skills.</p>
+        <p>
+          Hello! I'm [Your Name], a front-end developer based in [Your City]. I
+          have experience building websites and web applications with a focus on
+          creating efficient and engaging user interfaces.
+        </p>
+        <p>
+          I enjoy problem-solving and continuous learning. My current skillset
+          includes HTML, CSS, JavaScript, React, and more. I'm always exploring
+          new technologies and methodologies to improve my work.
+        </p>
+        <p>
+          Outside of coding, I love [Your Hobbies/Interests], which keeps me
+          balanced and motivated!
+        </p>
       </section>
 
+      <!-- Projects Section -->
       <section id="projects">
         <h2>Projects</h2>
-        <p>This is where you'll showcase your projects.</p>
+        <div class="project-grid">
+          <div class="project">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Project 1 Image"
+            />
+            <h3>Project 1</h3>
+            <p>Brief description of the project.</p>
+            <a href="https://github.com/yourusername/project1" target="_blank"
+              >View on GitHub</a
+            >
+          </div>
+          <div class="project">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Project 2 Image"
+            />
+            <h3>Project 2</h3>
+            <p>Brief description of the project.</p>
+            <a href="https://github.com/yourusername/project2" target="_blank"
+              >View on GitHub</a
+            >
+          </div>
+        </div>
       </section>
 
+      <!-- Contact Section -->
       <section id="contact">
         <h2>Contact Me</h2>
-        <p>This is where your contact form will go.</p>
+        <form action="#" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
       </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 [Your Name]. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
