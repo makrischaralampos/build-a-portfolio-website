@@ -1,12 +1,98 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures consistent sizing across elements */
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  font-family: "Roboto", sans-serif; /* Global font choice */
+  line-height: 1.6; /* Improve readability */
+  background-color: #f4f4f9; /* Light background color for the entire page */
+  color: #333; /* Default text color */
+  padding: 20px; /* General page padding */
+}
+
+/* Main container for overall layout */
+.container {
+  max-width: 1200px; /* Limit content width */
+  margin: 0 auto; /* Center the content */
+  padding: 0 20px; /* Ensure consistent padding */
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #007bff; /* Primary blue color for headings */
+  margin-bottom: 20px; /* Space below headings */
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 30px; /* More space below headings */
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center; /* Center main headings */
+}
+
+h2 {
+  font-size: 30px;
+  text-align: left; /* Left-align section headings */
+}
+
+/* Paragraphs */
+p {
+  font-size: 18px; /* Slightly larger font for body text */
+  line-height: 1.8; /* Increase line height for better readability */
+  text-align: justify; /* Justify text for clean alignment */
+  margin-bottom: 20px; /* Space between paragraphs */
+  color: #555; /* Slightly lighter text color */
+}
+
+/* Links */
+a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline by default */
+}
+
+a:hover {
+  color: #0056b3; /* Darken link color on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Button */
+button {
+  font-family: "Roboto", sans-serif; /* Apply the same global font to buttons */
+  padding: 10px 20px; /* Increase padding for buttons */
+  font-size: 16px; /* Larger font size for readability */
+}
+
+p,
+input,
+textarea,
+button {
+  margin-bottom: 15px; /* Uniform spacing for elements */
+}
+
+/* General Layout */
+section {
+  margin-bottom: 80px; /* Increased space between sections */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for section blocks */
+  padding: 40px; /* Increase padding inside sections */
+  background-color: white; /* Ensure clean background for each section */
+  border-radius: 10px; /* Round corners for sections */
 }
 
 header {
@@ -119,41 +205,91 @@ h2 {
 
 /* Contact Form Section */
 #contact {
-  padding: 2em;
-  background-color: #f9f9f9;
+  max-width: 600px; /* Set a max width for the form */
+  margin: 20px auto; /* Center the form on the page */
+  padding: 20px; /* Add some padding */
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-#contact h2 {
-  font-size: 24px;
-  margin-bottom: 1em;
+h2 {
+  text-align: center; /* Center the header */
+  color: #333; /* Dark text color */
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange items vertically */
 }
 
 label {
-  font-weight: bold;
+  margin: 10px 0 5px; /* Space around labels */
+  font-weight: bold; /* Make labels bold */
 }
 
 input,
 textarea {
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 10px; /* Padding inside inputs and textareas */
+  border: 1px solid #ccc; /* Light border color */
+  border-radius: 4px; /* Sligthly rounded corners */
+  resize: vertical; /* Allow vertical resizing for textarea */
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Add subtle shadow inside inputs */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0056b3; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a glowing effect on focus */
+  outline: none; /* Remove outline */
 }
 
 button {
-  padding: 0.7em;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+  margin-top: 10px; /* Space above button */
+  padding: 10px; /* Padding inside button */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners for the button */
+  cursor: pointer; /* Change curson on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift the button slightly on hover */
+}
+
+.error {
+  color: red; /* Red color for error messages */
+  margin-top: 5px; /* Space above error messages */
+}
+
+.success {
+  color: green; /* Green color for success messages */
+  margin-top: 5px; /* Space above success messages */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px; /* Reduce heading size for mobile */
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px; /* Ensure readable font size on mobile */
+  }
+
+  .container {
+    padding: 0 10px; /* Reduce padding on smaller screens */
+  }
+
+  button {
+    width: 100%; /* Make buttons full width on mobile */
+  }
 }
